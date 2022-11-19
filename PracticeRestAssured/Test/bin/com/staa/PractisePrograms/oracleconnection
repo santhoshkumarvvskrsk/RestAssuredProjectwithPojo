@@ -1,8 +1,0 @@
-Hemanth Nammi2:44 PM
-	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		// TODO Auto-generated method stub
-		Class.forName("oracle.jdbc.driver.OracleDriver");// class.forName load the Driver class
-		Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521/XE","qa","qa");  
-		Statement st= con.createStatement();
-		ResultSet rs= st.executeQuery("Select * from tablename");// once executeQuery() executes the query and stores the records in to ResultSet object.
-Sys
