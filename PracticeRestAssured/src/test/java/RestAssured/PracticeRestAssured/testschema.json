@@ -1,0 +1,12 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema",
+"data":{"id":"integer",
+"email":"string",
+"first_name":"string",
+"last_name":"string",
+"avatar":"strubg"
+},
+"support":{"url":"string",
+"text":"string"
+}
+}

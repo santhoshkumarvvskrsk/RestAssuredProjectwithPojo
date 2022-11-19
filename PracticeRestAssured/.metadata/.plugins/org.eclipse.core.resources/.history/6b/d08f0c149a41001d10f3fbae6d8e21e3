@@ -1,0 +1,35 @@
+package Maven_Testng.Maven_Testng;
+
+import org.testng.annotations.Test;
+//import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import Maven_Testng.Maven_Testng.Resuable_Methods.readInputData;
+
+public class dataDrivenTest {
+  @Test(dataProvider="testdata")
+  public void f(String name, String role, Integer salary) throws InterruptedException{
+	  
+	  System.out.println(name + "==" + role+"=="+ salary );
+	  
+  }
+//  @BeforeTest
+//  public void beforeTest() {
+//  }
+  
+  @DataProvider(name="testdata")
+  public Object[][] TestDataFeed()
+  {
+	  readInputData config = new readInputData("C:\\Users\\santhosh\\Documents\\ddtestdata.xlsx");
+	  int rows = config.getRowCount(0);
+	  
+	  Object[][] credentials = new Object[rows][2];
+	  for(int i=0;i<rows;i++)
+	  {
+	  credentials[i][0] = config.getData(0, i, 0);
+	  credentials[i][1] = config.getData(0, i, 1);
+	  }
+	  return credentials;
+	  
+  }
+
+}
