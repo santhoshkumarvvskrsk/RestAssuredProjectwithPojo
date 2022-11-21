@@ -4,9 +4,9 @@
   <test thread-count="5" name="Test">
     <classes>
       <class name="RestAssured.PracticeRestAssured.dataDriven"/>
-      <class name="RestAssured.PracticeRestAssured.testApi"/>
+     <!-- <class name="RestAssured.PracticeRestAssured.testApi"/>
       <class name="RestAssured.PracticeRestAssured.Test1_BasicFeatures"/>
-      <class name="RestAssured.PracticeRestAssured.AppTest"/>
+      <class name="RestAssured.PracticeRestAssured.AppTest"/>-->
     </classes>
   </test> <!-- Test1-->
 </suite> <!-- Suite -->
